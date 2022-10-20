@@ -3,7 +3,9 @@ package ru.netology;
 public class IntsCalculator implements Ints {
     protected final Calculator target;
 
-    public IntsCalculator() { this.target = new Calculator(); }
+    public IntsCalculator() {
+        this.target = new Calculator();
+    }
 
     @Override
     public int sum(int arg0, int arg1) {
@@ -31,6 +33,7 @@ public class IntsCalculator implements Ints {
                 .calculate(Calculator.Operation.POW)
                 .result();
     }
+
     @Override
     public int sub(int a, int b) {
         return (int) target.newFormula()
@@ -39,6 +42,7 @@ public class IntsCalculator implements Ints {
                 .calculate(Calculator.Operation.SUB)
                 .result();
     }
+
     @Override
     public int div(int a, int b) {
         return (int) target.newFormula()
